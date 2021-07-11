@@ -18,7 +18,7 @@ To containerize your application follow the below steps:
 * Inside your Application Directory "Create a DockerFile" 
   ```
   {
-  ROM python:3.8 
+  FROM python:3.8 
   WORKDIR /EmailAnalyzer-Akash-Cloud
   COPY . . 
   RUN pip install -r 
@@ -27,4 +27,7 @@ To containerize your application follow the below steps:
   CMD ["EmailInspector-Web.py"] 
   }
   ```  
+* To build the image execute the below command:
+  ``` docker build -t emalianalyzer-akash-cloud .```
+ Note:In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own.
 
