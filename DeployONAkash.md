@@ -28,9 +28,20 @@ To containerize your application follow the below steps:
   }
   ```  
 * To build the image execute the below command:
-  ```docker docker build -t emalianalyzer-akash-cloud . ```
+  ```docker build -t emalianalyzer-akash-cloud . ```
   * <b>Note:</b>In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own image name.
 
 * To test your image execute the below command
-  ```docker docker run -p 80:80 emailanalyzer-akash-cloud ```
+  ```docker run -p 80:80 emailanalyzer-akash-cloud ```
+  
+## PUSH IMAGE TO DOCKERHUB:
+
+After creating the docker image we need to make it publicly available so that it can be used with Akash Cloud.So, to push the docker image follow the below steps:
+
+* The above command would have created a container id, to view the container id issue the command: <b><b>docker ps -a</b></b> and check the container id corresponding to the image name <b>emailanalyzer-akash-cloud</b>
+* docker commit container-id <dockerhub username>/<image-name>
+* docker push <dockerhub username>/<image-name>
+
+
+
 
