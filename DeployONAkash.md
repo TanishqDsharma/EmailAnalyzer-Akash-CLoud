@@ -16,7 +16,7 @@ For Demonstration Purposes, clone this repo <a  href="https://github.com/Tanishq
 <b>Now,To deploy our application on Akash, we need to first containerize it.</b>
 To containerize your application follow the below steps:
 * Inside your Application Directory "Create a DockerFile" 
-  ```
+  ```docker
   {
   FROM python:3.8 
   WORKDIR /EmailAnalyzer-Akash-Cloud
@@ -28,9 +28,9 @@ To containerize your application follow the below steps:
   }
   ```  
 * To build the image execute the below command:
-  ``` docker build -t emalianalyzer-akash-cloud . ```
+  ```docker docker build -t emalianalyzer-akash-cloud . ```
   * <b>Note:</b>In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own image name.
 
 * To test your image execute the below command
-  ``` docker run -p 80:80 emailanalyzer-akash-cloud ```
+  ```docker docker run -p 80:80 emailanalyzer-akash-cloud ```
 
