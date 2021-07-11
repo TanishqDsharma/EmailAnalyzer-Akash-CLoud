@@ -42,6 +42,7 @@ After creating the docker image we need to make it publicly available so that it
 * docker commit container-id dockerhub-username/image-name
 * docker push dockerhub-username/image-name
 
+* NOTE: in place of tanishq512 and emailanalyzer-akash-cloud:1 (you have to use your own dockerhub-username and image-name)
 
 
 
