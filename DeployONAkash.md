@@ -26,7 +26,5 @@ RUN pip install -r requirments.txt
 ENTRYPOINT ["python"]
 
 CMD ["EmailInspector-Web.py"]
-
-
-  * ```  
+```  
 
