@@ -16,7 +16,7 @@ For Demonstration Purposes, clone this repo <a  href="https://github.com/Tanishq
 <b>Now,To deploy our application on Akash, we need to first containerize it.</b>
 To containerize your application follow the below steps:
 * Inside your Application Directory "Create a DockerFile" 
-  * ```
+  ```
   {
   ROM python:3.8 
   WORKDIR /EmailAnalyzer-Akash-Cloud
