@@ -29,5 +29,5 @@ To containerize your application follow the below steps:
   ```  
 * To build the image execute the below command:
   ``` docker build -t emalianalyzer-akash-cloud .```
- Note:In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own.
+  * Note:In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own.
 
