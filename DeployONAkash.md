@@ -44,5 +44,10 @@ After creating the docker image we need to make it publicly available so that it
 
 * NOTE: in place of tanishq512 and emailanalyzer-akash-cloud:1 (you have to use your own dockerhub-username and image-name)
 
+Finally, we are finish with pushing our docker image to dockerhub, now this image is publicly available and can be used by Akash for deployment purposes.
+
+# Deploying Your Application on Akash-Cloud:
+
+
 
 
