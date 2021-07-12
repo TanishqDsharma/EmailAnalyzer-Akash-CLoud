@@ -166,7 +166,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 * Create a Deployment:
   * To create a deployment on akash run:
     * akash tx deployment create deploy.yml --from $AKASH_KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID --fees 5000uakt -y
-{
+```{
 {"height":"1762707",
 "txhash":"EB9357BD723C9AFDB7163EC7C685D5F5480550E88754527B3AA784744AC8BFF1",
 "codespace":"",
@@ -225,7 +225,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 "attributes":[
 {"key":"action","value":"create-deployment"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"94734","tx":null,"timestamp":""}
 
-}
+}```
 
 
 
