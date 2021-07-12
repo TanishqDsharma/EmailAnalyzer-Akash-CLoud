@@ -154,11 +154,78 @@ no certificate found for address akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w. g
 "signatures":[]}
 
 confirm transaction before signing and broadcasting [y/N]: y
-{"height":"1674650","txhash":"CE9C2889E2F04D80E05402927EF01F7C2CBE55FDEDA4C4E71F7E63943A01D122","codespace":"","code":0,"data":"0A190A17636572742D6372656174652D6365727469666963617465","raw_log":"[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"cert-create-certificate\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"message","attributes":[{"key":"action","value":"cert-create-certificate"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"93013","tx":null,"timestamp":""}
+{"height":"1674650",
+"txhash":"CE9C2889E2F04D80E05402927EF01F7C2CBE55FDEDA4C4E71F7E63943A01D122",
+"codespace":"","code":0,"data":"0A190A17636572742D6372656174652D6365727469666963617465",
+"raw_log":"[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"cert-create-certificate\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"message","attributes":[{"key":"action","value":"cert-create-certificate"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"93013","tx":null,"timestamp":""}
 
 
  }
  ```  
+
+* Create a Deployment:
+  * To create a deployment on akash run:
+    * akash tx deployment create deploy.yml --from $AKASH_KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID --fees 5000uakt -y
+{
+{"height":"1762707",
+"txhash":"EB9357BD723C9AFDB7163EC7C685D5F5480550E88754527B3AA784744AC8BFF1",
+"codespace":"",
+"code":0,
+"data":"0A130A116372656174652D6465706C6F796D656E74",
+"raw_log":"[{\"events\":[{\"type\":\"akash.v1\",\"attributes\":[{\"key\":\"module\",\"value\":\"deployment\"},{\"key\":\"action\",\"value\":\"deployment-created\"},{\"key\":\"version\",\"value\":\"c0982dc13f4c47a4d15ac9306ac69c251d19fbcf47fc2f32edf244d96672c3c2\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1762706\"},{\"key\":\"module\",\"value\":\"market\"},{\"key\":\"action\",\"value\":\"order-created\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1762706\"},{\"key\":\"gseq\",\"value\":\"1\"},{\"key\":\"oseq\",\"value\":\"1\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"create-deployment\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"},{\"key\":\"recipient\",\"value\":\"akash14pphss726thpwws3yc458hggufynm9x77l4l2u\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000000uakt\"}]}]}]",
+"logs":[
+{
+"msg_index":0,
+"log":"",
+"events":[
+{
+"type":"akash.v1","attributes":[
+{
+"key":"module",
+"value":"deployment"
+},
+{
+"key":"action",
+"value":"deployment-created"
+},
+{
+"key":"version",
+"value":"c0982dc13f4c47a4d15ac9306ac69c251d19fbcf47fc2f32edf244d96672c3c2"},
+{
+"key":"owner",
+"value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},
+{
+"key":"dseq",
+"value":"1762706"},
+{
+"key":"module",
+"value":"market"
+},
+{
+"key":"action",
+"value":"order-created"
+},
+{
+"key":"owner",
+"value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"
+},
+{
+"key":"dseq",
+"value":"1762706"
+},
+{
+"key":"gseq",
+"value":"1"
+},
+{
+"key":"oseq",
+"value":"1"
+}]},
+{"type":"message",
+"attributes":[
+{"key":"action","value":"create-deployment"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"94734","tx":null,"timestamp":""}
+
+}
 
 
 
