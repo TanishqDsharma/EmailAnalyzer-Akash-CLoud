@@ -224,8 +224,10 @@ confirm transaction before signing and broadcasting [y/N]: y
 {"type":"message",
 "attributes":[
 {"key":"action","value":"create-deployment"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"94734","tx":null,"timestamp":""}
-
 }```
+
+* Find your Deployment Sequence
+
 
 
 
