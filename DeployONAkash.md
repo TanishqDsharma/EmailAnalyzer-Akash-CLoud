@@ -78,7 +78,9 @@ After containerizing your application, deploying to Akash simply involves writin
 
 * Create your Configuration:
   * Create a deployment configuration named as deploy.yml in the root directory
-    ```{--
+```
+{
+---
 version: "2.0"
 
 services:
@@ -117,7 +119,8 @@ deployment:
       profile: web
       count: 1
     
-    }```
+}
+```
  
 
 
