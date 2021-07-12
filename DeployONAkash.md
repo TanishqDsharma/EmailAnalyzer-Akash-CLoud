@@ -48,6 +48,31 @@ Finally, we are finish with pushing our docker image to dockerhub, now this imag
 
 # Deploying Your Application on Akash-Cloud:
 
+After containerizing your application, deploying to Akash simply involves writing small configuration file and executing a couple of commands.Follow the below steps to successfully deploy your application on Akash:
+
+* Create an Account:
+  * You can give any name to your wallet in this case I used "TanishqWallet" 
+  * akash keys add TanishqWallet
+  Read the output and save mnemonic phrase in a safe place.
+  * In terminal also set your AKASH_KEY_NAME=
+
+* Setup your Account Address in the terminal so that we can easily use it later:
+  * export AKASH_ACCOUNT_ADDRESS="$(akash keys show MyWallet -a)"
+  * echo $AKASH_ACCOUNT_ADDRESS
+
+* Fund Your Akash Account:
+  * You can buy some AKT tokens from the exchanges like AscendEX, Osmosis, Bitmart. Find the full list of exchanges <a href="https://akash.network/token">here.</a> 
+
+* Connect to the Network":
+  * Run the below commands in your terminal to connect yourself to the network:
+    * AKASH_NET="https://raw.githubusercontent.com/ovrclk/net/master/mainnet"
+    * AKASH_VERSION="$(curl -s "$AKASH_NET/version.txt")"
+    * export AKASH_CHAIN_ID="$(curl -s "$AKASH_NET/chain-id.txt")"
+    * export AKASH_NODE="$(curl -s "$AKASH_NET/rpc-nodes.txt" | head -1)"
+    * echo $AKASH_NODE $AKASH_CHAIN_ID $AKASH_KEYRING_BACKEND
+
+
+
 
 
 
