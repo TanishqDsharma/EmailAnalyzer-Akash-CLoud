@@ -130,6 +130,7 @@ deployment:
   * Above command will generate an ouput like this:
 ```
 {
+<div style="background-color: coral;">
 no certificate found for address akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w. generating new...
 
 {"body":
@@ -159,7 +160,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 "codespace":"","code":0,"data":"0A190A17636572742D6372656174652D6365727469666963617465",
 "raw_log":"[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"cert-create-certificate\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"message","attributes":[{"key":"action","value":"cert-create-certificate"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"93013","tx":null,"timestamp":""}
 
-
+</div>
  }
  ```  
 
@@ -230,6 +231,113 @@ confirm transaction before signing and broadcasting [y/N]: y
 
 * Find your Deployment Sequence
 
+* Verify deployment is open
+akash query deployment get --owner $AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
+
+deployment:
+  created_at: "1762707"
+  deployment_id:
+    dseq: "1762706"
+    owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+  state: active
+  version: wJgtwT9MR6TRWskwasacJR0Z+89H/C8y7fJE2WZyw8I=
+escrow_account:
+  balance:
+    amount: "5000000"
+    denom: uakt
+  id:
+    scope: deployment
+    xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1762706
+  owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+  settled_at: "1762707"
+  state: open
+  transferred:
+    amount: "0"
+    denom: uakt
+groups:
+- created_at: "1762707"
+  group_id:
+    dseq: "1762706"
+    gseq: 1
+    owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+  group_spec:
+    name: westcoast
+    requirements:
+      attributes:
+      - key: host
+        value: akash
+      signed_by:
+        all_of: []
+        any_of:
+        - akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63
+    resources:
+    - count: 1
+      price:
+        amount: "1000"
+        denom: uakt
+      resources:
+        cpu:
+          attributes: []
+          units:
+            val: "100"
+        endpoints:
+        - kind: SHARED_HTTP
+        memory:
+          attributes: []
+          quantity:
+            val: "536870912"
+        storage:
+          attributes: []
+          quantity:
+            val: "536870912"
+  state: open
+
+
+* Verify Order is Open
+akash query market order get --node $AKASH_NODE --owner $AKASH_ACCOUNT_ADDRESS --dseq $AKASH_DSEQ --oseq $AKASH_OSEQ --gseq $AKASH_GSEQ
+
+created_at: "1762707"
+order_id:
+  dseq: "1762706"
+  gseq: 1
+  oseq: 1
+  owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+spec:
+  name: westcoast
+  requirements:
+    attributes:
+    - key: host
+      value: akash
+    signed_by:
+      all_of: []
+      any_of:
+      - akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63
+  resources:
+  - count: 1
+    price:
+      amount: "1000"
+      denom: uakt
+    resources:
+      cpu:
+        attributes: []
+        units:
+          val: "100"
+      endpoints:
+      - kind: SHARED_HTTP
+      memory:
+        attributes: []
+        quantity:
+          val: "536870912"
+      storage:
+        attributes: []
+        quantity:
+          val: "536870912"
+state: open
+
+
+* View your Bids
+
+akash query market bid list --owner=$AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
 
 
 
