@@ -86,7 +86,7 @@ version: "2.0"
 
 services:
   web:
-    image: tanishq512/tanishq512/emailanalyzer-akash-cloud:1
+    image: tanishq512/emailanalyzer-akash-cloud:1
     expose:
       - port: 5000
         as: 80
@@ -122,6 +122,7 @@ deployment:
     
 }
 ```
+Note: Make sure to change the image according to your docker image in deploy.yml file.
 
 * Create a certificate:
   * Before you can create a deployment, a certificate must first be created. Your certificate needs to be created only once per account and can be used across all deployments.To     create the certificate run the below command in your terminal:
