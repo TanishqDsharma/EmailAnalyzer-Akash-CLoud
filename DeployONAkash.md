@@ -71,6 +71,7 @@ After containerizing your application, deploying to Akash simply involves writin
     * export AKASH_CHAIN_ID="$(curl -s "$AKASH_NET/chain-id.txt")"
     * export AKASH_NODE="$(curl -s "$AKASH_NET/rpc-nodes.txt" | head -1)"
     * echo $AKASH_NODE $AKASH_CHAIN_ID $AKASH_KEYRING_BACKEND
+    * AKASH_KEYRING_BACKEND=os
 
 * Check your Account Balance:
   * Run the below command in your terminal to check the account balance:
@@ -121,7 +122,23 @@ deployment:
     
 }
 ```
- 
+
+* Create a certificate:
+  * Before you can create a deployment, a certificate must first be created. Your certificate needs to be created only once per account and can be used across all deployments.To     create the certificate run the below command in your terminal:
+    * akash tx cert create client --chain-id $AKASH_CHAIN_ID --keyring-backend $AKASH_KEYRING_BACKEND --from $AKASH_KEY_NAME --node $AKASH_NODE --fees 5000uakt
+  
+  * Above command will generate an ouput like this:
+```
+{
+no certificate found for address akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w. generating new...
+
+{"body":{"messages":          [{"@type":"/akash.cert.v1beta1.MsgCreateCertificate","owner":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w","cert":"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2ekNDQVdXZ0F3SUJBZ0lJRm84a3VKc200YWd3Q2dZSUtvWkl6ajBFQXdJd1NqRTFNRE1HQTFVRUF4TXMKWVd0aGMyZ3hNamxsWVhGMmJUTjFhbk0yTURabE5EZHVZV1ZtTnpjMmN6VjVZekI1T0hadWRUUjNNbmN4RVRBUApCZ1ZuZ1FVQ0JoTUdkakF1TUM0eE1CNFhEVEl4TURjd05qQTNOVGt5TlZvWERUSXlNRGN3TmpBM05Ua3lOVm93ClNqRTFNRE1HQTFVRUF4TXNZV3RoYzJneE1qbGxZWEYyYlROMWFuTTJNRFpsTkRkdVlXVm1OemMyY3pWNVl6QjUKT0hadWRUUjNNbmN4RVRBUEJnVm5nUVVDQmhNR2RqQXVNQzR4TUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowRApBUWNEUWdBRWlaZkdqVWNhTDl5YmtYc1pmY256YVNvNWZycm5qV2V1NzVtTlY2OFV1SE5reGlCZStWNTJTZXVrCkM0NG1oRmRBRkdxUlBwbzNqZDBKZHp5cE5tU3N2cU0xTURNd0RnWURWUjBQQVFIL0JBUURBZ1F3TUJNR0ExVWQKSlFRTU1Bb0dDQ3NHQVFVRkJ3TUNNQXdHQTFVZEV3RUIvd1FDTUFBd0NnWUlLb1pJemowRUF3SURTQUF3UlFJZwpNYTFQMEV4ZnpzcmtGWTZUOUNSMlAyakVZR1dRTFdRZHFpQnN6OGM0cUZvQ0lRRFlEUVlIYmlGanh5WUIyRnFiCldZMTFqRlNSUHpwUXRMMmd3eXNsYUZCS1NnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=","pubkey":"LS0tLS1CRUdJTiBFQyBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFaVpmR2pVY2FMOXlia1hzWmZjbnphU281ZnJybgpqV2V1NzVtTlY2OFV1SE5reGlCZStWNTJTZXVrQzQ0bWhGZEFGR3FSUHBvM2pkMEpkenlwTm1Tc3ZnPT0KLS0tLS1FTkQgRUMgUFVCTElDIEtFWS0tLS0tCg=="}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"uakt","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+
+confirm transaction before signing and broadcasting [y/N]: y
+{"height":"1674650","txhash":"CE9C2889E2F04D80E05402927EF01F7C2CBE55FDEDA4C4E71F7E63943A01D122","codespace":"","code":0,"data":"0A190A17636572742D6372656174652D6365727469666963617465","raw_log":"[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"cert-create-certificate\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"message","attributes":[{"key":"action","value":"cert-create-certificate"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"93013","tx":null,"timestamp":""}
+
+ }
+ ```  
 
 
 
