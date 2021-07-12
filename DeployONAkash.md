@@ -128,7 +128,6 @@ deployment:
     * akash tx cert create client --chain-id $AKASH_CHAIN_ID --keyring-backend $AKASH_KEYRING_BACKEND --from $AKASH_KEY_NAME --node $AKASH_NODE --fees 5000uakt
   
   * Above command will generate an ouput like this:
-<div style="background-color: coral;">
 ```
 {
 
@@ -164,7 +163,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 
  }
  ```
-</div>
+
 
 * Create a Deployment:
   * To create a deployment on akash run:
