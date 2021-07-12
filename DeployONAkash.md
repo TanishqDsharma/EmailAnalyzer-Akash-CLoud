@@ -54,10 +54,11 @@ After containerizing your application, deploying to Akash simply involves writin
   * You can give any name to your wallet in this case I used "TanishqWallet" 
   * akash keys add TanishqWallet
   Read the output and save mnemonic phrase in a safe place.
-  * In terminal also set your AKASH_KEY_NAME=
+  * In terminal also set your AKASH_KEY_NAME=TanishqWallet, in your case name could be different.
+
 
 * Setup your Account Address in the terminal so that we can easily use it later:
-  * export AKASH_ACCOUNT_ADDRESS="$(akash keys show MyWallet -a)"
+  * export AKASH_ACCOUNT_ADDRESS="$(akash keys show TanishqWallet -a)"
   * echo $AKASH_ACCOUNT_ADDRESS
 
 * Fund Your Akash Account:
@@ -70,6 +71,55 @@ After containerizing your application, deploying to Akash simply involves writin
     * export AKASH_CHAIN_ID="$(curl -s "$AKASH_NET/chain-id.txt")"
     * export AKASH_NODE="$(curl -s "$AKASH_NET/rpc-nodes.txt" | head -1)"
     * echo $AKASH_NODE $AKASH_CHAIN_ID $AKASH_KEYRING_BACKEND
+
+* Check your Account Balance:
+  * Run the below command in your terminal to check the account balance:
+    * akash query bank balances --node $AKASH_NODE $AKASH_ACCOUNT_ADDRESS
+
+* Create your Configuration:
+  * Create a deployment configuration named as deploy.yml in the root directory
+    ```{--
+version: "2.0"
+
+services:
+  web:
+    image: tanishq512/tanishq512/emailanalyzer-akash-cloud:1
+    expose:
+      - port: 5000
+        as: 80
+        to:
+          - global: true
+profiles:
+  compute:
+    web:
+      resources:
+        cpu:
+          units: 0.1
+        memory:
+          size: 512Mi
+        storage:
+          size: 512Mi
+  placement:
+    westcoast:
+      attributes:
+        host: akash
+      signedBy:
+        anyOf:
+          - "akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63"
+      pricing:
+        web: 
+          denom: uakt
+          amount: 1000
+
+deployment:
+  web:
+    westcoast:
+      profile: web
+      count: 1
+    
+    }```
+ 
+
 
 
 
