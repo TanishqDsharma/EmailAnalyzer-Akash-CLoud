@@ -49,11 +49,16 @@ This app will analyze your email data for you to by which you will know that the
 
 4) Now paste your email data in text area
    
-   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/2021-06-27%2015_10_17-Mail.png)
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/4.png)
 
 5) After pasting your email data in text area filed,Click on "Analyze it" button and you will get your email data Analyzed.
    
-   ![alt text]()
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/5.png)
+   
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/6.png)
+
+   
+   
    
    
 
