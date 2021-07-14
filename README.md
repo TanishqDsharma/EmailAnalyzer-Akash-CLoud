@@ -1,6 +1,7 @@
 # Email Analyzer: An open, decentralized Security Tool
 
-Link to app hosted on Akash : <a href="http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/">EmailAnalyzer</a> : 
+Link to app hosted on Akash : <a href="http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/">EmailAnalyzer</a> 
+Guide to deploy your application on Akash : <a href=" https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/Guide_to_Deploy_your_Application_on_Akash.md">DeploymentGuide</a>
 
 # Introduction
 
