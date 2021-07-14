@@ -28,17 +28,17 @@ To containerize your application follow the below steps:
   }
   ```  
 * To build the image execute the below command:
-  ```docker build -t emalianalyzer-akash-cloud . ```
+  ```docker build -t emailimage1:2 . ```
   * <b>Note:</b>In this case I used the image name as emalianalyzer-akash-cloud ,but you can give your own image name.
 
 * To test your image execute the below command
-  ```docker run -p 80:80 emailanalyzer-akash-cloud ```
+  ```docker run -p 80:80 emailimage1:2 ```
   
 ## PUSH IMAGE TO DOCKERHUB:
 
 After creating the docker image we need to make it publicly available so that it can be used with Akash Cloud.So, to push the docker image follow the below steps:
 
-* The above command would have created a container id, to view the container id issue the command: <b><b>docker ps -a</b></b> and check the container id corresponding to the image name <b>emailanalyzer-akash-cloud</b>
+* The above command would have created a container id, to view the container id issue the command: <b><b>docker ps -a</b></b> and check the container id corresponding to the image name <b>emailimage1:2</b>
 * docker commit container-id dockerhub-username/image-name
 * docker push dockerhub-username/image-name
 
@@ -169,97 +169,62 @@ confirm transaction before signing and broadcasting [y/N]: y
 * Create a Deployment:
   * To create a deployment on akash run:
     * akash tx deployment create deploy.yml --from $AKASH_KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID --fees 5000uakt -y
-```
-{
-{"height":"1762707",
-"txhash":"EB9357BD723C9AFDB7163EC7C685D5F5480550E88754527B3AA784744AC8BFF1",
-"codespace":"",
-"code":0,
-"data":"0A130A116372656174652D6465706C6F796D656E74",
-"raw_log":"[{\"events\":[{\"type\":\"akash.v1\",\"attributes\":[{\"key\":\"module\",\"value\":\"deployment\"},{\"key\":\"action\",\"value\":\"deployment-created\"},{\"key\":\"version\",\"value\":\"c0982dc13f4c47a4d15ac9306ac69c251d19fbcf47fc2f32edf244d96672c3c2\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1762706\"},{\"key\":\"module\",\"value\":\"market\"},{\"key\":\"action\",\"value\":\"order-created\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1762706\"},{\"key\":\"gseq\",\"value\":\"1\"},{\"key\":\"oseq\",\"value\":\"1\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"create-deployment\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"},{\"key\":\"recipient\",\"value\":\"akash14pphss726thpwws3yc458hggufynm9x77l4l2u\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000000uakt\"}]}]}]",
-"logs":[
-{
-"msg_index":0,
-"log":"",
-"events":[
-{
-"type":"akash.v1","attributes":[
-{
-"key":"module",
-"value":"deployment"
-},
-{
-"key":"action",
-"value":"deployment-created"
-},
-{
-"key":"version",
-"value":"c0982dc13f4c47a4d15ac9306ac69c251d19fbcf47fc2f32edf244d96672c3c2"},
-{
-"key":"owner",
-"value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},
-{
-"key":"dseq",
-"value":"1762706"},
-{
-"key":"module",
-"value":"market"
-},
-{
-"key":"action",
-"value":"order-created"
-},
-{
-"key":"owner",
-"value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"
-},
-{
-"key":"dseq",
-"value":"1762706"
-},
-{
-"key":"gseq",
-"value":"1"
-},
-{
-"key":"oseq",
-"value":"1"
-}]},
-{"type":"message",
-"attributes":[
-{"key":"action","value":"create-deployment"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"94734","tx":null,"timestamp":""}
-}
-```
+ 
+ ```
+ {
+ {"height":"1787108",
+ "txhash":"1D5BB68423E07FCD0C1D087598792C10FF4F7308AF559F9109E994542BD47E83",
+ "codespace":"",
+ "code":0,
+ "data":"0A130A116372656174652D6465706C6F796D656E74",
+ "raw_log":"[{\"events\":[{\"type\":\"akash.v1\",\"attributes\":[{\"key\":\"module\",\"value\":\"deployment\"},{\"key\":\"action\",\"value\":\"deployment-created\"},{\"key\":\"version\",\"value\":\"5654919575826d357b7f57846f7542954e11abd0d28a12fcd87ca8a84f427bf7\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1787107\"},{\"key\":\"module\",\"value\":\"market\"},{\"key\":\"action\",\"value\":\"order-created\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1787107\"},{\"key\":\"gseq\",\"value\":\"1\"},{\"key\":\"oseq\",\"value\":\"1\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"create-deployment\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"},{\"key\":\"recipient\",\"value\":\"akash14pphss726thpwws3yc458hggufynm9x77l4l2u\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000000uakt\"}]}]}]",
+ "logs":[
+ {"msg_index":0,
+ "log":"",
+ "events":[
+ {"type":"akash.v1",
+ "attributes":[
+ {"key":"module","value":"deployment"},{"key":"action","value":"deployment-created"},{"key":"version","value":"5654919575826d357b7f57846f7542954e11abd0d28a12fcd87ca8a84f427bf7"},{"key":"owner","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"dseq","value":"1787107"},{"key":"module","value":"market"},{"key":"action","value":"order-created"},{"key":"owner","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"dseq","value":"1787107"},{"key":"gseq","value":"1"},{"key":"oseq","value":"1"}]},{"type":"message","attributes":[{"key":"action","value":"create-deployment"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"94734","tx":null,"timestamp":""}
+
+ }
+ ```
 
 * Find your Deployment Sequence
+  * From the above output we need the values of DSEQ,GSEQ and OSEQ.After extracting the values from above output set the me to shell variables
+    * AKASH_DSEQ = 1787107  
+    * AKASH_GSEQ = 1
+    * AKASH_OSEQ = 1
 
 * Verify deployment is open
 akash query deployment get --owner $AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
 
+ 
+ ```
+ {
 deployment:
-  created_at: "1762707"
+  created_at: "1787108"
   deployment_id:
-    dseq: "1762706"
+    dseq: "1787107"
     owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
   state: active
-  version: wJgtwT9MR6TRWskwasacJR0Z+89H/C8y7fJE2WZyw8I=
+  version: VlSRlXWCbTV7f1eEb3VClU4Rq9DSihL82HyoqE9Ce/c=
 escrow_account:
   balance:
     amount: "5000000"
     denom: uakt
   id:
     scope: deployment
-    xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1762706
+    xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1787107
   owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
-  settled_at: "1762707"
+  settled_at: "1787108"
   state: open
   transferred:
     amount: "0"
     denom: uakt
 groups:
-- created_at: "1762707"
+- created_at: "1787108"
   group_id:
-    dseq: "1762706"
+    dseq: "1787107"
     gseq: 1
     owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
   group_spec:
@@ -295,12 +260,19 @@ groups:
   state: open
 
 
-* Verify Order is Open
-akash query market order get --node $AKASH_NODE --owner $AKASH_ACCOUNT_ADDRESS --dseq $AKASH_DSEQ --oseq $AKASH_OSEQ --gseq $AKASH_GSEQ
+ }
+ ```
 
-created_at: "1762707"
+
+* Verify Order is Open
+  * akash query market order get --node $AKASH_NODE --owner $AKASH_ACCOUNT_ADDRESS --dseq $AKASH_DSEQ --oseq $AKASH_OSEQ --gseq $AKASH_GSEQ
+
+ 
+ ```
+ {
+ created_at: "1787108"
 order_id:
-  dseq: "1762706"
+  dseq: "1787107"
   gseq: 1
   oseq: 1
   owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
@@ -336,10 +308,184 @@ spec:
           val: "536870912"
 state: open
 
+ }
+ ```
 
 * View your Bids
+  * akash query market bid list --owner=$AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
 
-akash query market bid list --owner=$AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
+ 
+ ```
+ {bids:
+- bid:
+    bid_id:
+      dseq: "1787107"
+      gseq: 1
+      oseq: 1
+      owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+      provider: akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    created_at: "1787109"
+    price:
+      amount: "1"
+      denom: uakt
+    state: open
+  escrow_account:
+    balance:
+      amount: "50000000"
+      denom: uakt
+    id:
+      scope: bid
+      xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1787107/1/1/akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    owner: akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    settled_at: "1787109"
+    state: open
+    transferred:
+      amount: "0"
+      denom: uakt
+- bid:
+    bid_id:
+      dseq: "1787107"
+      gseq: 1
+      oseq: 1
+      owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+      provider: akash1f6gmtjpx4r8qda9nxjwq26fp5mcjyqmaq5m6j7
+    created_at: "1787109"
+    price:
+      amount: "2"
+      denom: uakt
+    state: open
+  escrow_account:
+    balance:
+      amount: "50000000"
+      denom: uakt
+    id:
+      scope: bid
+      xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1787107/1/1/akash1f6gmtjpx4r8qda9nxjwq26fp5mcjyqmaq5m6j7
+    owner: akash1f6gmtjpx4r8qda9nxjwq26fp5mcjyqmaq5m6j7
+    settled_at: "1787109"
+    state: open
+    transferred:
+      amount: "0"
+      denom: uakt
+pagination:
+  next_key: null
+  total: "0"
+
+ 
+ }
+ ```
+* Choose a provider from the above the output:
+  * Note that there are bids from multiple different providers. In this case, both providers happen to be willing to accept a price of 1 uAKT. This means that the lease can be created using 1 uAKT or 0.000001 AKT per block to execute the container.
+  * For this example, we will choose akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhca
+  * In your terminal run: AKASH_PROVIDER=akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+
+* Create a lease:
+  * akash tx market lease create --chain-id $AKASH_CHAIN_ID --node $AKASH_NODE --owner $AKASH_ACCOUNT_ADDRESS --dseq $AKASH_DSEQ --gseq $AKASH_GSEQ --oseq $AKASH_OSEQ --provider $AKASH_PROVIDER --from $AKASH_KEY_NAME --fees 5000uakt
+ 
+ ```
+ {
+ {"body":
+ {"messages":[
+ {"@type":"/akash.market.v1beta1.MsgCreateLease",
+ "bid_id":{"owner":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w",
+ "dseq":"1787107",
+ "gseq":1,
+ "oseq":1,
+ "provider":"akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal"}
+ }],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"uakt","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+
+confirm transaction before signing and broadcasting [y/N]: y
+{"height":"1787148",
+"txhash":"0FD232290E24B40339FD1E5492A3AE628041E81553C164073FC03A2D3229121C",
+"codespace":"",
+"code":0,
+"data":"0A0E0A0C6372656174652D6C65617365",
+"raw_log":"[{\"events\":[{\"type\":\"akash.v1\",\"attributes\":[{\"key\":\"module\",\"value\":\"market\"},{\"key\":\"action\",\"value\":\"lease-created\"},{\"key\":\"owner\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"dseq\",\"value\":\"1787107\"},{\"key\":\"gseq\",\"value\":\"1\"},{\"key\":\"oseq\",\"value\":\"1\"},{\"key\":\"provider\",\"value\":\"akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal\"},{\"key\":\"price-denom\",\"value\":\"uakt\"},{\"key\":\"price-amount\",\"value\":\"1\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"create-lease\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"sender\",\"value\":\"akash14pphss726thpwws3yc458hggufynm9x77l4l2u\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8\"},{\"key\":\"sender\",\"value\":\"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w\"},{\"key\":\"amount\",\"value\":\"5000uakt\"},{\"key\":\"recipient\",\"value\":\"akash1f6gmtjpx4r8qda9nxjwq26fp5mcjyqmaq5m6j7\"},{\"key\":\"sender\",\"value\":\"akash14pphss726thpwws3yc458hggufynm9x77l4l2u\"},{\"key\":\"amount\",\"value\":\"50000000uakt\"}]}]}]",
+"logs":[{"msg_index":0,"log":"","events":[{"type":"akash.v1","attributes":[{"key":"module","value":"market"},{"key":"action","value":"lease-created"},{"key":"owner","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"dseq","value":"1787107"},{"key":"gseq","value":"1"},{"key":"oseq","value":"1"},{"key":"provider","value":"akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal"},{"key":"price-denom","value":"uakt"},{"key":"price-amount","value":"1"}]},{"type":"message","attributes":[{"key":"action","value":"create-lease"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"sender","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"akash17xpfvakm2amg962yls6f84z3kell8c5lazw8j8"},{"key":"sender","value":"akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w"},{"key":"amount","value":"5000uakt"},{"key":"recipient","value":"akash1f6gmtjpx4r8qda9nxjwq26fp5mcjyqmaq5m6j7"},{"key":"sender","value":"akash14pphss726thpwws3yc458hggufynm9x77l4l2u"},{"key":"amount","value":"50000000uakt"}]}]}],"info":"","gas_wanted":"200000","gas_used":"131381","tx":null,"timestamp":""}
+                                                                                                                                                                                     
+ }
+ ```
+ 
+ * Confirm the lease:
+   * akash query market lease list --owner $AKASH_ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $AKASH_DSEQ
+  
+```
+{
+leases:
+- escrow_payment:
+    account_id:
+      scope: deployment
+      xid: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w/1787107
+    balance:
+      amount: "0"
+      denom: uakt
+    owner: akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    payment_id: 1/1/akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    rate:
+      amount: "1"
+      denom: uakt
+    state: open
+    withdrawn:
+      amount: "0"
+      denom: uakt
+  lease:
+    created_at: "1787148"
+    lease_id:
+      dseq: "1787107"
+      gseq: 1
+      oseq: 1
+      owner: akash129eaqvm3ujs606e47naef776s5yc0y8vnu4w2w
+      provider: akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+    price:
+      amount: "1"
+      denom: uakt
+    state: active
+pagination:
+  next_key: null
+  total: "0"
+}
+```
+* Send the Manifest:
+  * akash provider send-manifest deploy.yml --node $AKASH_NODE --dseq $AKASH_DSEQ --provider $AKASH_PROVIDER --home ~/.akash --from $AKASH_KEY_NAME
+
+```
+{
+provider: akash10cl5rm0cqnpj45knzakpa4cnvn5amzwp4lhcal
+        status: PASS
+}
+```
+
+* Confirm the URL:
+  * akash provider lease-status --node $AKASH_NODE --home ~/.akash --dseq $AKASH_DSEQ --from $AKASH_KEY_NAME --provider $AKASH_PROVIDER
+
+
+```
+{
+{
+  "services": {
+    "web": {
+      "name": "web",
+      "available": 1,
+      "total": 1,
+      "uris": [
+        "jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io"
+      ],
+      "observed_generation": 1,
+      "replicas": 1,
+      "updated_replicas": 1,
+      "ready_replicas": 1,
+      "available_replicas": 1
+    }
+  },
+  "forwarded_ports": {}
+}
+  
+}
+```
+
+* Since we got the URL from the above result, we can access the application at:
+  
+  * http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/
 
 
 
