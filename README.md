@@ -1,6 +1,8 @@
-# <a href="http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/">MY DAPP LINK</a> : Hosted on Akash Cloud
+# Email Analyzer: An open, decentralized Security Tool
 
-# EmailAnalyzer
+Link to app hosted on Akash : <a href="http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/">EmailAnalyzer</a> : 
+
+# Introduction
 
 Email Header Analysis is a web based project developed with the aim of investigating emails to distinguish malicious emails from genuine ones.
 
