@@ -36,10 +36,26 @@ This app will analyze your email data for you to by which you will know that the
 # EmailAnalyzer Usage:
 
 1) Go to your gmail account and choose the email you want to analyze:
+   
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/1%20-%20Gmail.png)
+
 2) After selecting the email you want to analyze , click on the "3 dot option" and click on "show original meassage"
+   
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/2.png)
+
 3) Click on copy to clipboard and navigate to the <a href="http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/"> EmailAnalyzerApp</a>
+    
+    ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/3.png) 
+
 4) Now paste your email data in text area
-5) After pasting your email data in Click on "Analyze it" button and you will get your email data Analyzed.
+   
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/2021-06-27%2015_10_17-Mail.png)
+
+5) After pasting your email data in text area filed,Click on "Analyze it" button and you will get your email data Analyzed.
+   
+   ![alt text]()
+   
+   
 
 
  
