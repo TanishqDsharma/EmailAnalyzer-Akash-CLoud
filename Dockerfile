@@ -1,6 +1,6 @@
 FROM python:3.8
 
-WORKDIR /EmailInspector
+WORKDIR /EmailAnalyzer-Akash-Cloud
 COPY . .
 
 RUN pip install -r requirments.txt
