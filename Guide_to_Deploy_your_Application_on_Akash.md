@@ -554,7 +554,6 @@ pagination:
 # Conclusion:
   * I have successfully deployed my application on akash just by following the above steps
   * <b>My application link: </b>http://jc0ga52s0lbt7293rpgq7s96ao.ingress.sjc1p0.mainnet.akashian.io/
-  * For futher guidance to deploy your application on Akash you can follow Akash docs for beginners: https://docs.akash.network/guides/deployment
 
 
 
