@@ -15,13 +15,26 @@ In this guide we will deploy an application on Akash Cloud.
 * Install GO on your Machine
 * Install Akash CLI on your machine
 
-# Containerizing Your Application:
+# Setting-Up the project Locally:
 
 <b>For Demonstration Purposes, clone this repo: <a  href="https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud.git">Github repo</a></b>
 
+Note: If you have your own application you can move to <b>"Containerizing The Application"</b> step.
+
 <b><b>In your Terminal Type:</b></b>
-* git clone https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud.git
-* cd EmailAnalyzer-Akash-Cloud
+ 
+ ```
+ git clone https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud.git
+ ```
+ ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/g1.png)
+
+
+ ``` 
+ cd EmailAnalyzer-Akash-Cloud
+ ```
+ ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/g2.png)
+
+# Containerizing the application:
 
 <b>Now,To deploy our application on Akash, we need to first containerize it.</b>
 <b>To containerize your application follow the below steps:</b>
@@ -39,25 +52,42 @@ In this guide we will deploy an application on Akash Cloud.
   ```  
 * <b>To build the image execute the below command:</b>
 
-  ``` docker build -t email-image1:2 .   ```
+  ``` 
+  docker build -t <your-docker-image-name> .   
+  ```
+  ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/d1.png)
+  
 
-* <b>Note:</b>In this case I used the image name as emailimage1:2 ,but you can give your own image name.
+   *  <b>Note:</b>In this case I used the image name as emailimage1:2 ,but you can give your own image name.
 
 * <b>To test your image execute the below command</b>
    
-   ``` <b> docker run -p 80:80 email-image1:2 </b> ```
+   ``` 
+   <b> docker run -p 80:80 <your-docker-image-name> </b>
+   ```
+   ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/d2.png)
   
 ## PUSH IMAGE TO DOCKERHUB:
 
 After creating the docker image we need to make it publicly available so that it can be used with Akash Cloud.So, to push the docker image follow the below steps:
 
-* The above command would have created a container id, to view the container id issue the command: <b><b>docker ps -a</b></b> and check the container id corresponding to the image name <b>emailimage1:2</b>
+* The above command would have created a container id, to view the container id issue the command: <b><b>docker ps -a</b></b> and check the container id corresponding to the image name <b>securitytool1</b>
+
+  ```
+  docker ps -a
+  ```
+  ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/d3.png)
+
 * Now Use the below commands to create a new image from exisiting container and push it to the docker hub
 
-```
-docker commit container-id tanishq512/email-image1:2
-docker push tanishq512/email-image1:2
-```
+
+  ```
+  docker commit <container-id> <dockerhub-username>/<your-docker-image-name>
+  docker push <dockerhub-username>/<your-docker-image-name>
+  ```
+
+  ![alt text](https://github.com/TanishqDsharma/EmailAnalyzer-Akash-CLoud/blob/main/screenshots/d4.png)
+
 
 * NOTE: In place of <b>tanishq512</b> and <b><email-image1:2></b>,(you have to use your own dockerhub-username and image-name)
 
